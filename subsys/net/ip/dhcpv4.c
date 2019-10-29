@@ -268,7 +268,7 @@ static u32_t dhcpv4_send_request(struct net_if *iface)
 	case NET_DHCPV4_SELECTING:
 	case NET_DHCPV4_BOUND:
 		/* Not possible */
-		NET_ASSERT_INFO(0, "Invalid state %s",
+		NET_ASSERT(0, "Invalid state %s",
 			net_dhcpv4_state_name(iface->config.dhcpv4.state));
 		break;
 	case NET_DHCPV4_REQUESTING:

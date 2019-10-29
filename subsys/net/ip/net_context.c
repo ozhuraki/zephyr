@@ -891,7 +891,7 @@ int net_context_connect(struct net_context *context,
 	}
 
 	if (addr->sa_family != net_context_get_family(context)) {
-		NET_ASSERT_INFO(addr->sa_family == \
+		NET_ASSERT(addr->sa_family == \
 				net_context_get_family(context),
 				"Family mismatch %d should be %d",
 				addr->sa_family,
