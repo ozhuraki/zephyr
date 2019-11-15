@@ -1,7 +1,7 @@
 /* buf.c - Buffer management */
 
 /*
- * Copyright (c) 2015 Intel Corporation
+ * Copyright (c) 2015-2019 Intel Corporation
  *
  * SPDX-License-Identifier: Apache-2.0
  */
