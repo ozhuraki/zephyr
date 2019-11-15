@@ -235,6 +235,7 @@ struct net_buf *net_buf_alloc_len(struct net_buf_pool *pool, size_t size,
 #endif
 {
 	u32_t alloc_start = k_uptime_get_32();
+	size_t req_size = size;
 	struct net_buf *buf;
 	unsigned int key;
 
@@ -340,6 +341,7 @@ success:
 	pool->avail_count--;
 	NET_BUF_ASSERT(pool->avail_count >= 0);
 #endif
+	NET_BUF_ASSERT(req_size <= size);
 
 	return buf;
 }
