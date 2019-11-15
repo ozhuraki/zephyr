@@ -35,7 +35,7 @@ LOG_MODULE_REGISTER(LOG_MODULE_NAME);
 #define NET_BUF_ERR(fmt, ...)
 #define NET_BUF_WARN(fmt, ...)
 #define NET_BUF_INFO(fmt, ...)
-#define NET_BUF_ASSERT(cond)
+#define NET_BUF_ASSERT(cond, ...) __ASSERT(cond, "" __VA_ARGS__)
 #endif /* CONFIG_NET_BUF_LOG */
 
 #if CONFIG_NET_BUF_WARN_ALLOC_INTERVAL > 0
