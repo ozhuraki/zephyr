@@ -73,7 +73,7 @@ int main(void)
 		printf("Connection #%d from %s\n", counter++, addr_str);
 
 		while (1) {
-			char buf[128], *p;
+			static char buf[8192], *p;
 			int len = recv(client, buf, sizeof(buf), 0);
 			int out_len;
 
