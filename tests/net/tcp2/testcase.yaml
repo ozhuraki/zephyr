@@ -1,0 +1,3 @@
+tests:
+  net.tcp2:
+    tags: net tcp tcp2
